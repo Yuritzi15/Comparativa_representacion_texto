@@ -15,7 +15,7 @@ class TFIDF:
         #tamaño del vocabulario
         self.vocab_size = len(self.vocab)
         #ejecutar los cálculos
-        self.df = self.comptue_df()
+        self.df = self.compute_df()
         self.idf = self.compute_idf()
         self.tfidf_vectors = self.compute_tfidf_vectors()
 
@@ -57,3 +57,4 @@ class TFIDF:
   def get_tfidf_matrix(self):
     tfidf_matrix = self.compute_tfidf_vectors()
     return pd.DataFrame(tfidf_matrix, columns=self.vocab)
+
